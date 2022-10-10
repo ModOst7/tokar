@@ -1,57 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import { createBrowserRouter, RouterProvider, Route, HashRouter, Routes } from "react-router-dom";
+import "./App.css";
+import Root from "./routes/root";
+import Registration from "./routes/registration";
+import Help from "./routes/help";
+import Labs from "./routes/labs";
+import LabOne from "./routes/labs/labOne";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+  },
+  {
+    path: "registration",
+    element: <Registration />,
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <React.StrictMode>
+      {/*<RouterProvider router={router} />*/}
+      <HashRouter
+        basename="/"
+      >
+        <Routes>
+        <Route path="/" element={<Root />}/>
+        <Route path="/registration" element={<Registration />}/>
+        <Route path="/help" element={<Help />}/>
+        <Route path="/labs" element={<Labs />}/>
+        <Route path="/labs/1" element={<LabOne />}/>
+        </Routes>
+      </HashRouter>
+    </React.StrictMode>
   );
 }
 

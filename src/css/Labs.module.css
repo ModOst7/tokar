@@ -1,0 +1,28 @@
+.main {
+    height: 100vh;
+    background: url('../img/labs/background.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.header {
+    overflow: auto;
+}
+
+.title {
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 136.51%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.labs-container {
+    margin: 200px 0 0 100px;
+}
+
+.lab-link {
+    display: block;
+    margin: 0 0 20px 0;
+}

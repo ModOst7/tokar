@@ -1,0 +1,184 @@
+.main {
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+}
+
+.left-block {
+    width: 686px;
+    background: url('../img/registration/left-block.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.offer-registration {
+    margin-bottom: 40px;
+    margin-top: 139px;
+    margin-left: 70px;
+    color: #FFFFFF;
+
+    font-size: 27px;
+    line-height: 119.51%;
+}
+
+.form-registration {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-name,
+.middle-name,
+.last-name {
+    width: 283px;
+    margin-bottom: 14px;
+
+    font-size: 22px;
+    line-height: 29px;
+}
+
+.right-block {
+    width: 1280px;
+}
+
+.title {
+    margin-top: 60px;
+    text-transform: uppercase;
+
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 136.51%;
+}
+
+.description {
+    width: 1088px;
+    margin-top: 50px;
+
+    font-size: 20px;
+    line-height: 141.01%;
+}
+
+.buttons-container {
+    margin-top: 100px;
+    margin-left: -290px;
+}
+
+.start-link,
+.help-link {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.start-link {
+    margin-right: 105px;
+}
+
+.start-button {
+    transition: 0.1s;
+    width: 348px;
+    height: 136px;
+    background: linear-gradient(82.42deg, #910000 -3.3%, #E50000 92.3%);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.start-button:hover {
+    background: #FFFFFF;
+    color: black;
+}
+
+.start {
+    text-align: center;
+    
+    font-size: 40px;
+    line-height: 123.51%;
+}
+
+.help-button {
+    transition: 0.1s;
+    width: 348px;
+    height: 136px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.help {
+    font-size: 40px;
+    line-height: 123.51%;
+    text-align: center;
+}
+
+.help-button:hover {
+    background: #4A6074;
+    color: white;
+}
+
+.contacts {
+    display: flex;
+    margin-top: 80px;
+    margin-left: -115px;
+}
+
+.address, .phone,
+.site,
+.mail {
+    margin-right: 50px;
+}
+
+.address {
+    font-size: 18px;
+    line-height: 123.51%;
+}
+
+.phone,
+.site,
+.mail {
+    display: flex;
+    align-items: flex-end;
+    font-size: 18px;
+    line-height: 123.51%;
+}
+
+.phone {}
+
+.icon {
+    margin-right: 7px;
+    margin-bottom: -4px;
+}
+
+.side-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    bottom: 0px;
+    right: 40px;
+    position: absolute;
+}
+
+.practice {
+    color: #CECECE;
+    writing-mode: vertical-rl;
+    font-size: 60px;
+    line-height: 123.51%;
+    margin-left: 10px;
+}
+
+.top-arrow {
+    background: url('../img/root/top-arrow.png');
+    background-repeat: no-repeat;
+    height: 235px;
+    width: 100%;
+}
+
+.bottom-arrow {
+    background: url('../img/root/bottom-arrow.png');
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 100%;
+}

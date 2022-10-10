@@ -1,0 +1,31 @@
+.header {
+    height: 121px;
+    background: #4A6074;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    margin-left: 70px;
+}
+
+.back, .forward, .print {
+    margin-right: 30px;
+}
+
+.lab-number,
+.lab-name {
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 136.51%;
+}
+
+.lab-title {
+    margin-right: 60px;
+}
