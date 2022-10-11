@@ -11,8 +11,19 @@ import {
 } from "../features/fullname/fullnameSlice";
 
 export default function Registration() {
+
+
+  const [errorMessage, setErrorMessage] = useState(false);
+
   const fullname = useSelector(selectFullname);
   const dispatch = useDispatch();
+  console.log(fullname.firstName);
+  const checkFullname = (e) => {
+    if (!fullname.firstName || !fullname.middleName || !fullname.lastName) {
+      e.preventDefault();
+      setErrorMessage(true);
+    }
+  }
 
   return (
     <>
@@ -25,15 +36,27 @@ export default function Registration() {
           </div>
           <div className={styles["form-registration"]}>
             <input
+              value={fullname.lastName}
               className={styles["last-name"]}
               placeholder="Фамилия"
               onChange={(e) => {
                 dispatch(changeLastName(e.target.value));
-                console.log(fullname);
               }}
             />
-            <input className={styles["first-name"]} placeholder="Имя" />
-            <input className={styles["middle-name"]} placeholder="Отчество" />
+            <input className={styles["first-name"]}
+              value={fullname.firstName}
+              placeholder="Имя"
+              onChange={(e) => {
+                dispatch(changeFirstName(e.target.value));
+              }}
+            />
+            <input className={styles["middle-name"]}
+              value={fullname.middleName}
+              placeholder="Отчество"
+              onChange={(e) => {
+                dispatch(changeMiddleName(e.target.value));
+              }}
+            />
           </div>
         </div>
         <div className={styles["right-block"]}>
@@ -41,7 +64,7 @@ export default function Registration() {
           </div>
           <div className={styles["description"]}>Вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст вводный текст </div>
           <div className={styles["buttons-container"]}>
-            <Link className={styles['start-link']} to={`/labs/`}>
+            <Link className={styles['start-link']} to={`/labs/`} onClick={checkFullname}>
               <div className={styles['start-button']}>
                 <div className={styles['start']}>НАЧАТЬ</div>
               </div>
@@ -67,6 +90,11 @@ export default function Registration() {
           <div className={styles['top-arrow']}></div>
           <div className={styles['practice']}>ПРАКТИКУМ</div>
           <div className={styles['bottom-arrow']}></div>
+        </div>
+        <div className={`${styles["whitescreen"]} ${errorMessage ? styles["vis"] : ""} `}></div>
+        <div className={`${styles["error-bar"]} ${errorMessage ? styles["vis"] : ""} `}>
+          <div className={styles["error-message"]}>Заполните все поля формы!</div>
+          <div className={styles["error-icon"]} onClick={() => setErrorMessage(false)} ><img className={styles["error-image"]} src="./img/registration/close.svg" /></div>
         </div>
       </div>
     </>

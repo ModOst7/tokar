@@ -1,28 +1,27 @@
 .main {
     min-height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     display: flex;
 }
 
 .left-block {
-    width: 686px;
+    width: 37%;
     background: url('../img/registration/left-block.png');
     background-repeat: no-repeat;
+    background-size: contain;
     height: 100vh;
 }
 
 .offer-registration {
-    margin-bottom: 40px;
-    margin-top: 139px;
-    margin-left: 70px;
+    margin: 20.5% 0 6% 10%;
     color: #FFFFFF;
 
-    font-size: 27px;
+    font-size: 1.4vw;
     line-height: 119.51%;
 }
 
 .form-registration {
-    margin-left: 70px;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
 }
@@ -30,37 +29,37 @@
 .first-name,
 .middle-name,
 .last-name {
-    width: 283px;
-    margin-bottom: 14px;
+    width: 46%;
+    margin-bottom: 2.3%;
 
-    font-size: 22px;
-    line-height: 29px;
+    font-size: 1.15vw;
+    line-height: 130%;
 }
 
 .right-block {
-    width: 1280px;
+    width: 66%;
 }
 
 .title {
-    margin-top: 60px;
+    margin-top: 3.1vw;
     text-transform: uppercase;
 
     font-weight: 600;
-    font-size: 35px;
+    font-size: 1.82vw;
     line-height: 136.51%;
 }
 
 .description {
-    width: 1088px;
-    margin-top: 50px;
+    width: 88.5%;
+    margin-top: 2.6vw;
 
-    font-size: 20px;
+    font-size: 1.05vw;
     line-height: 141.01%;
 }
 
 .buttons-container {
-    margin-top: 100px;
-    margin-left: -290px;
+    margin-top: 5.2vw;
+    margin-left: -24%;
 }
 
 .start-link,
@@ -71,18 +70,19 @@
 }
 
 .start-link {
-    margin-right: 105px;
+    margin-right: 7%;
 }
 
 .start-button {
     transition: 0.1s;
-    width: 348px;
-    height: 136px;
+    width: 18vw;
+    height: 7vw;
     background: linear-gradient(82.42deg, #910000 -3.3%, #E50000 92.3%);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: #FFFFFF;
 }
 
 .start-button:hover {
@@ -92,15 +92,14 @@
 
 .start {
     text-align: center;
-    
-    font-size: 40px;
+    font-size: 2.1vw;
     line-height: 123.51%;
 }
 
 .help-button {
     transition: 0.1s;
-    width: 348px;
-    height: 136px;
+    width: 18vw;
+    height: 7vw;
     background: #FFFFFF;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -109,7 +108,7 @@
 }
 
 .help {
-    font-size: 40px;
+    font-size: 2.1vw;
     line-height: 123.51%;
     text-align: center;
 }
@@ -121,18 +120,19 @@
 
 .contacts {
     display: flex;
-    margin-top: 80px;
-    margin-left: -115px;
+    margin-top: 4vw;
+    margin-left: -9.5%;
 }
 
-.address, .phone,
+.address,
+.phone,
 .site,
 .mail {
-    margin-right: 50px;
+    margin-right: 3.7%;
 }
 
 .address {
-    font-size: 18px;
+    font-size: 0.94vw;
     line-height: 123.51%;
 }
 
@@ -141,44 +141,100 @@
 .mail {
     display: flex;
     align-items: flex-end;
-    font-size: 18px;
+    font-size: 0.94vw;
     line-height: 123.51%;
+    white-space: nowrap;
 }
 
 .phone {}
 
 .icon {
-    margin-right: 7px;
-    margin-bottom: -4px;
+    width: 2vw;
+    margin-right: 4%;
+    margin-bottom: -2.3%;
 }
 
 .side-info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    bottom: 0px;
-    right: 40px;
+    right: 2%;
+    top: 13vw;
     position: absolute;
+    width: 4%;
 }
 
 .practice {
     color: #CECECE;
     writing-mode: vertical-rl;
-    font-size: 60px;
-    line-height: 123.51%;
     margin-left: 10px;
+
+    /*font 60px*/
+    font-size: 3.1vw;
+    line-height: 123.51%;
 }
 
 .top-arrow {
     background: url('../img/root/top-arrow.png');
     background-repeat: no-repeat;
-    height: 235px;
+    background-size: contain;
+    background-position: bottom;
+    height: 12vw;
     width: 100%;
 }
 
 .bottom-arrow {
     background: url('../img/root/bottom-arrow.png');
     background-repeat: no-repeat;
-    height: 130px;
+    background-size: contain;
+    height: 6vw;
     width: 100%;
+}
+
+.whitescreen {
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.whitescreen.vis {
+    visibility: visible;
+    opacity: 1;
+}
+
+.error-bar {
+    transition: 1s;
+    position: absolute;
+    background: linear-gradient(180deg, #9D0000 0%, #E40000 100%);
+    width: 100%;
+    height: 7.5vw;
+    bottom: -200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.error-bar.vis {
+    bottom: 0;
+}
+
+.error-message {
+    color: #FFFFFF;
+    font-size: 2.3vw;
+    line-height: 130%;
+    text-align: center;
+    flex: 0.92;
+}
+
+.error-icon {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.error-image {
+    width: 3.7vw;
 }

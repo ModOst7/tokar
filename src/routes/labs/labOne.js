@@ -10,13 +10,13 @@ export default function LabOne() {
         <div className={styles["header"]}>
           <div className={styles["navigation"]}>
             <div className={styles["back"]}>
-              <img src="./img/labs/back.png" />
+              <img className={styles["navigation-icon"]} src="./img/labs/back.png" />
             </div>
             <div className={styles["forward"]}>
-              <img src="./img/labs/forward.png" />
+              <img className={styles["navigation-icon"]} src="./img/labs/forward.png" />
             </div>
             <div className={styles["print"]}>
-              <img src="./img/labs/print.png" />
+              <img className={styles["navigation-icon"]} src="./img/labs/print.png" />
             </div>
           </div>
           <div className={styles["lab-title"]}>

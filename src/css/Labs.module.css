@@ -3,6 +3,7 @@
     background: url('../img/labs/background.png');
     background-repeat: no-repeat;
     background-position: bottom right;
+    background-size: 66%;
 }
 
 .header {
@@ -10,9 +11,9 @@
 }
 
 .title {
-    margin-top: 50px;
+    margin-top: 2.7%;
     font-weight: 600;
-    font-size: 35px;
+    font-size: 1.8vw;
     line-height: 136.51%;
     text-align: center;
     text-transform: uppercase;
@@ -25,4 +26,6 @@
 .lab-link {
     display: block;
     margin: 0 0 20px 0;
+
+    font-size: 2vw;
 }
