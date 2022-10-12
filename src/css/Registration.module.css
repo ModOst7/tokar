@@ -5,15 +5,15 @@
 }
 
 .left-block {
-    width: 37%;
+    width: 33.5%;
     background: url('../img/registration/left-block.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 100vh;
 }
 
 .offer-registration {
-    margin: 20.5% 0 6% 10%;
+    margin: 7.5vw 0 6% 10%;
     color: #FFFFFF;
 
     font-size: 1.4vw;
@@ -34,14 +34,20 @@
 
     font-size: 1.15vw;
     line-height: 130%;
+    font-family: 'Segoe UI';
 }
 
 .right-block {
+    box-sizing: content-box;
+    padding-left: 1%;
     width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .title {
-    margin-top: 3.1vw;
+    margin-top: 2.1vw;
     text-transform: uppercase;
 
     font-weight: 600;
@@ -59,7 +65,7 @@
 
 .buttons-container {
     margin-top: 5.2vw;
-    margin-left: -24%;
+    margin-left: -19%;
 }
 
 .start-link,
@@ -121,7 +127,7 @@
 .contacts {
     display: flex;
     margin-top: 4vw;
-    margin-left: -9.5%;
+    margin-left: -7.5%;
 }
 
 .address,
@@ -159,7 +165,7 @@
     flex-direction: column;
     align-items: flex-end;
     right: 2%;
-    top: 13vw;
+    bottom: 1vw;
     position: absolute;
     width: 4%;
 }
@@ -237,4 +243,24 @@
 
 .error-image {
     width: 3.7vw;
+}
+
+@media screen and (max-width: 1366px) {
+    .offer-registration {
+        margin-top: 6vw;
+    }
+
+    .buttons-container {
+        margin-top: 3.2vw;
+    }
+
+    .contacts {
+        margin-top: 3vw;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .buttons-container {
+        margin-top: 3.2vw;
+    }
 }

@@ -38,21 +38,21 @@ export default function Registration() {
             <input
               value={fullname.lastName}
               className={styles["last-name"]}
-              placeholder="Фамилия"
+              placeholder=" Фамилия"
               onChange={(e) => {
                 dispatch(changeLastName(e.target.value));
               }}
             />
             <input className={styles["first-name"]}
               value={fullname.firstName}
-              placeholder="Имя"
+              placeholder=" Имя"
               onChange={(e) => {
                 dispatch(changeFirstName(e.target.value));
               }}
             />
             <input className={styles["middle-name"]}
               value={fullname.middleName}
-              placeholder="Отчество"
+              placeholder=" Отчество"
               onChange={(e) => {
                 dispatch(changeMiddleName(e.target.value));
               }}
